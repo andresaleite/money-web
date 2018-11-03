@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  p = 'Andrêsa';
+  nome = "Andresa";
+  idade = 25;
+
+  alertaNome(nome : string){
+    this.nome = nome.target.value;    
+  }
+
+  adicionar(nome : string){
+    this.nome = nome;
+    
+  }
 }
