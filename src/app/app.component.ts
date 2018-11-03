@@ -8,8 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   nome = "Andresa";
   adicionado = false;
+  funcionarios = [];
+  ultimoId = 0;
     adicionar(){
       this.adicionado = true;
-     
+      this.funcionarios.push({ 
+        id: ++this.ultimoId,
+        nome: this.nome});
     }
   }
