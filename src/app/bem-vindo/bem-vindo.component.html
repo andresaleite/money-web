@@ -1,12 +1,14 @@
-<p>
-  Bem-vindo!
-
-</p>
-<p>
-{{teste}}
-
-</p>
-<p>
- Minha idade é {{getIdade() + 13}}.
-  
-  </p>
+<div class="container">
+  <div class="alert alert-success" role="alert">
+    Nome do funcionário: {{nome}}
+  </div>
+  <form>
+	<div class="form-group">
+	  <label >Nome</label>
+	  <input type="text" class="form-control" (input)="alterarNome($event)" value="{{nome}}">
+	
+	</div>
+	
+	<button type="button" class="btn btn-primary" (click)="adicionar()" >Adicionar</button>
+   </form>
+</div>
