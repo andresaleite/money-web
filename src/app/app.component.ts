@@ -9,12 +9,8 @@ export class AppComponent {
   nome = "Andresa";
   idade = 25;
 
-  alertaNome(nome : string){
-    this.nome = nome.target.value;    
+    adicionar(){
+      const num = Math.round(Math.random()* 100) ;
+      this.nome = "Teste: "+num;
+    }
   }
-
-  adicionar(nome : string){
-    this.nome = nome;
-    
-  }
-}

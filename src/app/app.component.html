@@ -6,13 +6,10 @@
  
 	<div class="form-group">
 	  <label >Nome</label>
-    <input type="text" class="form-control" 
-    (input)="alertaNome($event)"
-    [value]="nome">
+    <input type="text" class="form-control" [(ngModel)]="nome">
 	
 	</div>
 	
-	<button type="button" class="btn btn-primary" (click)="adicionar(nome)" 
-	[disabled]="nome.length == 0">Adicionar</button>
+	<button type="button" class="btn btn-primary" [disabled]="nome.length == 0" (click)="adicionar()">Adicionar</button>
   
 </div>
