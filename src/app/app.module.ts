@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.components';
 import { BemVindoComponent } from './bem-vindo/bem-vindo.component';
+import { CampoColoridoDirective } from './campo-colorido.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
-    BemVindoComponent
+    BemVindoComponent,
+    CampoColoridoDirective
   ],
   imports: [
     BrowserModule,
