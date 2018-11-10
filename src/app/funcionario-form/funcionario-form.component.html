@@ -6,6 +6,8 @@
     <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado=false" appCampoColorido cor="blue">
     <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado=false" appCampoColorido [cor]="'yellow'">
     <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado=false" appCampoColorido [cor]="green">
-    <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado=false" [appCampoColorido]="'pink'">
+    <input type="text" class="form-control" [(ngModel)]="nome" (focus)="adicionado=false" [appCampoColorido]="'pink'" #campo = "campoColorido">
 </div>
 <button type="button" class="btn btn-primary" [disabled]="nome.length == 0" (click)="adicionar()">Adicionar</button>
+<button type="button" class="btn btn-info" [disabled]="nome.length == 0" (click)="campo.colorir()">Colorir</button>
+<button type="button" class="btn btn-info" [disabled]="nome.length == 0" (click)="campo.descolorir()">Descolorir</button>
