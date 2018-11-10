@@ -7,13 +7,14 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class FuncionarioFormComponent {
   nome = "Andrêsa";
+  green = 'black';
   @Output() funcionarioAdicionado = new EventEmitter();
-  adicionado = false;  
+  adicionado = false;
   ultimoId = 0;
 
-  adicionar(){
+  adicionar() {
     this.adicionado = true;
-    const funcionario = { 
+    const funcionario = {
       id: ++this.ultimoId,
        nome: this.nome};
     this.funcionarioAdicionado.emit(funcionario);
