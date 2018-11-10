@@ -1,5 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
+    {{nome | uppercase }} <br>
+    {{data | date}} <br>
+    {{preco | number}} <br>
+    {{troco | currency}} <br><br>
+
+
   <app-funcionario-form  (funcionarioAdicionado) = "aoAdicionar($event)"></app-funcionario-form>
   <div class="row" style="margin-top: 20px">
 
