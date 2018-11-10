@@ -1,5 +1,5 @@
 
-import { Directive, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
 
 @Directive({
   //selector: 'button'
@@ -11,10 +11,17 @@ export class CampoColoridoDirective {
   constructor(
     private elementRef: ElementRef,
     private renderer: Renderer2
-  ) {
-    this.renderer.setStyle(elementRef.nativeElement,
+  ) {}
+
+  @HostListener('focus') quandoFocar() {
+    this.renderer.setStyle(this.elementRef.nativeElement,
       'background-color', 'yellow');
-   }
+  }
+
+  @HostListener('blur') quandoPerderFoco() {
+    this.renderer.setStyle(this.elementRef.nativeElement,
+      'background-color', 'transparent');
+  }
 
 
 }
