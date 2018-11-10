@@ -1,8 +1,9 @@
 <div class="container">
     {{nome | uppercase }} <br>
-    {{data | date}} <br>
-    {{preco | number}} <br>
-    {{troco | currency}} <br><br>
+    {{data | date: 'dd/MM/y'}} <br>
+    {{data | date | uppercase}} <br>
+    {{preco | number: '1.2-2'}} <br>
+    {{troco | currency: 'BRL':true:'1.2-2'}} <br><br>
 
 
   <app-funcionario-form  (funcionarioAdicionado) = "aoAdicionar($event)"></app-funcionario-form>
