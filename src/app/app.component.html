@@ -1,5 +1,11 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
+    {{nome | uppercase }} <br>
+    {{data | date: 'dd/MM/y'}} <br>
+    {{data | date | uppercase}} <br>
+    {{preco | number: '1.2-2'}} <br>
+    {{troco | currency: 'BRL':true:'1.2-2'}} <br><br>
+
+
   <app-funcionario-form  (funcionarioAdicionado) = "aoAdicionar($event)"></app-funcionario-form>
   <div class="row" style="margin-top: 20px">
 

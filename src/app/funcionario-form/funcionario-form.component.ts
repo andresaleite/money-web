@@ -6,7 +6,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./funcionario-form.component.css']
 })
 export class FuncionarioFormComponent {
+
   nome = 'Andrêsa';
+
   @Output() funcionarioAdicionado = new EventEmitter();
   adicionado = false;
   ultimoId = 0;
