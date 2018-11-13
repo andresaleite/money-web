@@ -1,4 +1,5 @@
-import { Directive } from '@angular/core';
+
+import { Directive, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appCampoColorido]'

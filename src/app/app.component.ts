@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  p = 'Andrêsa';
-}
+    funcionarios = [];
+
+    aoAdicionar(funcionario: string) {
+      this.funcionarios.push(funcionario);
+    }
+  }
