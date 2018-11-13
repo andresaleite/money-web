@@ -12,13 +12,13 @@ import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.co
 @NgModule({
   declarations: [
     AppComponent,
+    CampoColoridoDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     FuncionarioFormComponent,
-    CampoColoridoDirective,
     FuncionarioCardComponent
   ],
   providers: [],
