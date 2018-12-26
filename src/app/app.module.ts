@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
 import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.component';
 import { CampoColoridoDirective } from './campo-colorido.directive';
+import { FuncionarioService } from './funcionario.service';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { CampoColoridoDirective } from './campo-colorido.directive';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [FuncionarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
