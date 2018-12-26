@@ -24,8 +24,7 @@ import { FuncionarioService } from './funcionario.service';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [FuncionarioService, LogService,
-  {provide: 'logPrefixo', useValue: 'LOG:'} ],
+  providers: [FuncionarioService, LogService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
