@@ -32,6 +32,8 @@ export class AppComponent implements OnInit {
     alterar(cidade) {
       this.cidadeService.alterar(cidade).then(response => {
         this.consultar();
+      }).catch(erro => {
+        alert(erro);
       });
     }
 

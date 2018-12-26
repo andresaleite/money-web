@@ -24,18 +24,19 @@ export class CidadeService {
   }
 
 
-  alterar(cidade): Promise<any> {
-    return this.http.put('http://localhost:3000/cidades/' + cidade.id, {nome: cidade.nome} )
+  alterar(cidade: any): Promise<any> {
+    return this.http.put(`http://localhost:3000/cidads/${cidade.id}`, cidade )
     .toPromise()
-    .then(response => response.json());
-
+    .then(response => response.json())
+    .catch(erro => {
+      return Promise.reject(`Erro ao alterar cidade ${cidade.id}`);
+    });
   }
 
-
-  excluir(id: number): Promise<any> {
-    return this.http.delete('http://localhost:3000/cidades/' + id)
+  excluir(id: number): Promise<void> {
+    return this.http.delete(`http://localhost:3000/cidades/${id}`)
     .toPromise()
-    .then(response => response.json());
+    .then(() => null);
 
   }
 }
