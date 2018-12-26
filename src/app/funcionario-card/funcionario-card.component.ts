@@ -17,13 +17,13 @@ export class FuncionarioCardComponent  {
   @Input() funcionario: any;
 
 
-  getEstilosCartao(){
+  getEstilosCartao() {
     return {
       backgroundColor : this.funcionario.id % 2 === 0 ? 'lightblue' : 'lightgreen',
       'border-width.px' : this.funcionario.id  }
   }
 
-  isAdmin(){
+  isAdmin() {
     return this.funcionario.nome.startsWith('T');
   }
 }

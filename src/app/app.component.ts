@@ -1,20 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FuncionarioService } from './funcionario.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-    nome =  'Andrêsa';
-    data = new Date();
-    preco = 785477;
-    troco = 1002.55;
+export class AppComponent implements OnInit {
     funcionarios = [];
+    funcionarioService: FuncionarioService;
 
-    aoAdicionar(funcionario : string){
-      this.funcionarios.push(funcionario);
+    constructor() {
+      this.funcionarioService = new FuncionarioService();
     }
+
+    ngOnInit() {
+      this.funcionarios = this.funcionarioService.consultar();
+      console.log(this.funcionarios);
 
 
   }
