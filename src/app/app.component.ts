@@ -12,7 +12,9 @@ export class AppComponent implements OnInit {
     constructor(private funcionarioService: FuncionarioService) { }
 
     ngOnInit() {
-      this.cidades = this.funcionarioService.consultar();
+      this.funcionarioService.consultar().then(response => {
+        this.cidades = response;
+      });
     }
 
     alterar(nome: string) {

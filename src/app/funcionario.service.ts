@@ -1,13 +1,13 @@
 import { Injectable } from "@angular/core";
-import { LogService } from "./log.service";
+import { Http } from "@angular/http";
 
 @Injectable()
 export class FuncionarioService {
 
+  constructor(private http: Http ) {}
+
   ultimoId = 1;
   funcionarios = [{id: 1, nome: 'Ubernlândia'}];
-
-  constructor(private log: LogService) {}
 
   adicionar(nome: string) {
     const funcionario = {
@@ -16,11 +16,14 @@ export class FuncionarioService {
     };
 
     this.funcionarios.push(funcionario);
-    this.log.log(`teste ${nome}`);
   }
 
-  consultar() {
-    return this.funcionarios;
+  consultar(): Promise<any> {
+    return this.http.get('http://localhost:3000/cidades')
+    .toPromise()
+    .then(response => response.json());
   }
+
+
 }
 

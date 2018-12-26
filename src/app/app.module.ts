@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { Http, HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +21,8 @@ import { FuncionarioModule } from './funcionario/funcionario.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FuncionarioModule
+    FuncionarioModule,
+    HttpModule
   ],
   providers: [LogService ],
   bootstrap: [AppComponent]
