@@ -1,0 +1,32 @@
+{
+  "cidades": [
+    {
+      "id": 1,
+      "nome": "Taguatinga"
+    },
+    {
+      "nome": "João Pessoa",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "nome": "Guará"
+    },
+    {
+      "id": 4,
+      "nome": "Sobradinho"
+    },
+    {
+      "nome": "Cruzeiro Novo",
+      "id": 5
+    },
+    {
+      "nome": "sudoeste",
+      "id": 6
+    },
+    {
+      "nome": "Cruzeiro Velho",
+      "id": 7
+    }
+  ]
+}
