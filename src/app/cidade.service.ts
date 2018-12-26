@@ -25,7 +25,7 @@ export class CidadeService {
 
 
   alterar(cidade: any): Promise<any> {
-    return this.http.put(`http://localhost:3000/cidads/${cidade.id}`, cidade )
+    return this.http.put(`http://localhost:3000/cidades/${cidade.id}`, cidade )
     .toPromise()
     .then(response => response.json())
     .catch(erro => {
