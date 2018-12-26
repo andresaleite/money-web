@@ -19,7 +19,7 @@ export class FuncionarioCardComponent  {
   getEstilosCartao() {
     return {
       backgroundColor : this.funcionario.id % 2 === 0 ? 'lightblue' : 'lightgreen',
-      'border-width.px' : this.funcionario.id  }
+      'border-width.px' : this.funcionario.id  };
   }
 
   isAdmin() {
