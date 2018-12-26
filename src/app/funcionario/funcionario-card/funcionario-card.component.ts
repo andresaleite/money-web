@@ -13,16 +13,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FuncionarioCardComponent  {
 
-  @Input() funcionario: any;
+  @Input() cidade: any;
 
 
-  getEstilosCartao() {
-    return {
-      backgroundColor : this.funcionario.id % 2 === 0 ? 'lightblue' : 'lightgreen',
-      'border-width.px' : this.funcionario.id  };
-  }
-
-  isAdmin() {
-    return this.funcionario.nome.startsWith('T');
-  }
 }

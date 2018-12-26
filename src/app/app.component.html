@@ -1,11 +1,34 @@
 <div class="container">
 
-
   <app-funcionario-form  (funcionarioAdicionado) = "aoAdicionar($event)"></app-funcionario-form>
-  <div class="row" style="margin-top: 20px">
+      <table class="table" style="margin-top:10px">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th colspan="2">Nome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cidade of cidades">
+              <td>{{cidade.id}}</td>
+              <td>
+                  <div class="input-group">
+                    <input type="text" class="form-control" [(ngModel)]="cidade.nome">
+                    <span class="input-group-btn">
+                      <button class="btn btn-primary" (click)="alterar(cidade)">
+                        Atualizar
+                      </button>
+                    </span>
+                  </div>
+              </td>
+              <td>
+                  <button class="btn btn-danger" (click)="excluir(cidade.id)">
+                      Excluir
+                    </button>
+              </td>
 
-   <div class="col-2" *ngFor="let funcionario of funcionarios">
-     <app-funcionario-card [funcionario]="funcionario"></app-funcionario-card>
-    </div>
-   </div>
+            </tr>
+          </tbody>
+
+        </table>
 </div>

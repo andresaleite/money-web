@@ -5,7 +5,7 @@ import { LogService } from "./log.service";
 export class FuncionarioService {
 
   ultimoId = 1;
-  funcionarios = [{id: 1, nome: 'Joana'}];
+  funcionarios = [{id: 1, nome: 'Ubernlândia'}];
 
   constructor(private log: LogService) {}
 

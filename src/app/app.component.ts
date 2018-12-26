@@ -7,13 +7,20 @@ import { FuncionarioService } from './funcionario.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-    funcionarios = [];
+    cidades = [];
 
     constructor(private funcionarioService: FuncionarioService) { }
 
     ngOnInit() {
-      this.funcionarios = this.funcionarioService.consultar();
-      console.log(this.funcionarios);
+      this.cidades = this.funcionarioService.consultar();
+    }
+
+    alterar(nome: string) {
+      alert(JSON.stringify(nome));
+    }
+
+    excluir(codigo: number) {
+      alert('excluir' + codigo);
     }
 
   }
