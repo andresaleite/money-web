@@ -28,4 +28,4 @@ import { FuncionarioService, FuncionarioAbreviadoService } from './funcionario.s
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
